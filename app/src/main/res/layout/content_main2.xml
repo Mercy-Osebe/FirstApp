@@ -7,20 +7,20 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <TextView
-        android:id="@+id/tvFirstnane"
+        android:id="@+id/tvFirstname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New name1"
+        android:text="@string/new_name1"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />  
     <TextView
-        android:id="@+id/tvFirstnane2"
+        android:id="@+id/tvFirstname2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New name2"
+        android:text="@string/new_name2"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

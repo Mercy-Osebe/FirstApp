@@ -1,5 +1,6 @@
 package com.example.firstapp;
 
+import  android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -14,11 +15,12 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import org.w3c.dom.Text;
 
-    int c=5;
+public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,10 +32,30 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Log.wtf("tag","button clicked");
                 Toast.makeText(MainActivity.this, "hey there",Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                startActivity(intent);
             }
         });
+
+        FloatingActionButton fab=findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                TextView textValue=findViewById(R.id.text_value);
+                String stringValue=textValue.getText().toString();
+                int originalValue=Integer.parseInt(stringValue);
+                int newValue=MyWorker.doubleTheValue(originalValue);
+                textValue.setText(Integer.toString(newValue));
+                Toast.makeText(MainActivity.this,"This is going to double our number",Toast.LENGTH_LONG).show();
+
+
+            }
+        });
+
     }
 
     @Override

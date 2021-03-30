@@ -3,4 +3,8 @@
     <string name="action_settings">Settings</string>
     <string name="New_name1"> New name1 </string>
     <string name="New_name2"> New name2 </string>
+    <string name="button2">AM NEW HERE</string>
+    <string name="new_name1">New name1</string>
+    <string name="new_name2">New name2</string>
+    <string name="am_new_here">AM NEW HERE</string>
 </resources>
